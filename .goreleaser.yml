@@ -39,7 +39,7 @@ dockers:
     goos: linux
     goarch: arm64
     ids:
-      - boxiddi-core
+      - s3-webhook-dumper
 docker_manifests:
   - name_template: quay.io/zebbra/s3-webhook-dumper:{{ .Tag }}
     image_templates:
