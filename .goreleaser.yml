@@ -22,7 +22,6 @@ dockers:
       - "--platform=linux/amd64"
       - "--pull"
     image_templates:
-      - "ghcr.io/zebbra/s3-webhook-dumper:{{ .Tag }}-amd64"
       - "quay.io/zebbra/s3-webhook-dumper:{{ .Tag }}-amd64"
     goos: linux
     goarch: amd64
@@ -34,7 +33,6 @@ dockers:
       - "--platform=linux/arm64"
       - "--pull"
     image_templates:
-      - "ghcr.io/zebbra/s3-webhook-dumper:{{ .Tag }}-arm64"
       - "quay.io/zebbra/s3-webhook-dumper:{{ .Tag }}-arm64"
     goos: linux
     goarch: arm64
