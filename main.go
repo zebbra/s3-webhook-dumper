@@ -17,8 +17,13 @@ import (
 )
 
 func main() {
+	http.HandleFunc("GET /_/health", healthHandler)
 	http.HandleFunc("POST /", uploadHandler)
 	log.Fatal(http.ListenAndServe(":8080", nil))
+}
+
+func healthHandler(w http.ResponseWriter, r *http.Request) {
+	_, _ = w.Write([]byte("OK"))
 }
 
 func uploadHandler(w http.ResponseWriter, r *http.Request) {
